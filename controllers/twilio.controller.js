@@ -14,16 +14,16 @@
 const sendMessage = async (req, res) => {
 
     try {
-        const accountSid = 'AC4d5b0283e73f2592e338161d305cefd7'; 
-        const authToken = '7a3f8e80bac8b24190859471d9c1a2d7'; 
+        const accountSid = ''; 
+        const authToken = ''; 
         const client = require('twilio')(accountSid, authToken); 
         
          
         client.messages 
               .create({ 
                  body: 'Hello! This is an editable text message. You are free to change it and write whatever you like.', 
-                 from: 'whatsapp:+14155238886',       
-                 to: 'whatsapp:+919796617824' 
+                 from: ',       
+                 to: '4' 
                }) 
               .then(message => res.json("ok")) 
               .done();
